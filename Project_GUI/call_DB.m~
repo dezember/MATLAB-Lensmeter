@@ -1,0 +1,13 @@
+function out=call_DB()
+    [calibration_plot]=dlmread('FarSightDB.txt');
+    farX=(calibration_plot(:,1));
+    farY=(calibration_plot(:,2));
+    farerr=(calibration_plot(:,3));
+
+    [calibration_plotn]=dlmread('NearSightDB.txt');
+    nearX=(calibration_plotn(:,1));calXn=(calXn);
+    nearY=(calibration_plotn(:,2));calYn=(calYn);
+    nearerr=(calibration_plotn(:,3));
+    
+    out=(farX,farY,farerr,nearX,nearY,nearerr);
+end
